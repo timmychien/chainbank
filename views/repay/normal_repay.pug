@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>還款</title>
+<style></style>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/repay/normal_repay.css">
+</head>
+<body>
+    include ../navigator/navigator.pug
+    <div id="search_bar">
+    <div class="wrap">
+    <div class="search">
+        <input type="text" class="searchTerm2" value=" 註冊錢包: #{wallet_address}" disabled >
+        <input type="text" class="searchTerm" value=" 代幣總數: #{balance} Tokens" disabled >
+    </div>
+    </div>
+    </div>
+    <div id="invest_list">
+    <div id="invest_details">
+        if data.length==0
+            <div style="margin:0 auto;width:350px;font-size:20px;color:grey;">您目前尚未持有需要還款的策略商品</div>    
+if data.length>0
+    <table border="1">
+        <tr>
+            <th id="portfolio_id_header">借貸代碼</th>
+            <th id="portfolio_type_header">借貸方法</th>
+            <th id="deadline">還款期限</th>
+            <th id="deadline">還款狀態</th>
+            <th id="type">還款類型</th>
+            <th id="need_to_pay">需還款金額</th>
+            <th id="need_rate_time">目前期數</th>
+            <th id="use">選擇金額</th>
+            <th id="use">進行</th>
+        </tr>
+        each x in data
+            <tr>
+            <form id="repay_sheet"action="" method="post">
+                <input type="hidden"id="requirement_id" name="requirement_id" value="#{x.requirementID}">
+                <input type="hidden"id="now_rate_num" name="now_rate_num" value="#{x.now_rate_time}">
+                <input type="hidden"id="credit" name="credit" value="#{x.creditID}">
+                <input type="hidden"id="need_to_pay_rate" name="rate_amount" value="#{x.creditID}">
+                <input type="hidden"id="need_to_pay_principle" name="principle" value="#{x.creditID}">
+                <input type="hidden"id="already_pay_rate_#{x.requirementID}" name="pay_rate" value="0">
+                <input type="hidden"id="already_pay_principle_#{x.requirementID}" name="pay_principle" value="0">
+                <td id="requirementID">
+                    |#{x.requirementID.slice(0,11)+"..."+x.requirementID.slice(-10)}
+                </td>
+                <td id="credit_type">
+                    |#{x.credit_type}
+                </td> 
+                <td id="credit_amount">
+                    |#{x.repay_time}
+                </td> 
+                if x.status=="還款完成"
+                    <td id="credit_status">
+                        |#{x.status}
+                    </td> 
+                else if x.status=="逾期請補款"
+                    <td style="background-color:rgb(211, 89, 89);color:white" id="credit_status">
+                        |#{x.status}
+                    </td> 
+                else if x.status=="低於維持率請補款"
+                    <td style="background-color:rgb(211, 100,100);color:white" id="credit_status">
+                        |#{x.status}
+                    </td> 
+                else if x.status=="待還款"
+                    <td id="credit_status">
+                        |#{x.status}
+                    </td>          
+                else if x.status=="違約"   
+                    <td style="background-color:red;color:white" id="credit_status">
+                        |#{x.status}
+                    </td>
+                <td>
+                    <select name="rates" id="rates_#{x.requirementID}" onchange="setting(this)" >
+                        if x.status=="還款完成"
+                            <option id="principle_#{x.requirementID}" value="#{x.need_to_pay}">還款完成</div>
+                        else
+                            <option id="principle_#{x.requirementID}" value="#{x.need_to_pay}">本金</option>
+                            <option id="rate_#{x.requirementID}" value="#{x.need_to_pay_rate}">利息</option>                            
+                    </select>
+                </td>                     
+                <td id="need_to_pay_#{x.requirementID}">
+                    |#{x.need_to_pay}
+                </td>                
+                <td id="ratetime">
+                    |#{x.now_rate_time}
+                </td> 
+                if x.status=="還款完成"
+                    <td>
+                        <input type="number" class="set_amount_#{x.requirementID}" id="set_amount" name="set_amount" min=1 max=#{x.need_to_pay} value=0 disabled>
+                    </td>  
+                    <td>
+                        <input id="repay" type="submit" value="取得憑證">
+                    </td>
+                else if balance!=0
+                    <td>
+                        <input type="number" class="set_amount_#{x.requirementID}" id="set_amount" name="set_amount" min=1 max=#{x.need_to_pay} onchange="setinput($(this))" value=0>
+                    </td>                
+                    <td>
+                        <input id="repay" type="submit" value="繳費">
+                    </td>
+                else if balance==0
+                    <td>
+                        <input type="number" class="set_amount_#{x.requirementID}" id="set_amount"name="set_amount" min=1 max=#{x.need_to_pay} value=0 disabled>
+                    </td>                
+                    <td>
+                        <input id="repay" type="submit" value="請儲值平台幣" disabled>
+                    </td>                                
+            </form>
+            </tr>
+    </table>            
+    </div>
+    </div>  
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script type="text/javascript" src="/javascripts/repay/normal_repay.js"></script>
+</html>

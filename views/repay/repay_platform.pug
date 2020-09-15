@@ -1,0 +1,42 @@
+<html>
+<meta charset="utf-8">
+<title>歸還平台幣</title>
+<style></style>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/repay/repay_platform.css">
+</head>
+<body>
+    include ../navigator/navigator.pug
+    <div class="topbar">
+    <div class="top_flowbar" id="select_credit_or_margin_text">
+    <h4>(1) 選擇憑證</h4></div>
+    <div class="top_flowbar" id="select_repay">
+    <h4>(2) 確認憑證訊息</h4></div>    
+    <div class="top_flowbar" id="repay">
+    <h4>(3) 繳納全額</h4></div>
+    <div class="top_flowbar" id="repay_to_platform">
+    <h4>(4) 歸還平台幣</h4></div>
+    </div>
+    </div>
+    <div id="select_credit_or_margin">
+    <div id="confirm_text">歸還平台幣</div>
+    <div id="credit_or_margin_sheet">
+        <div class="top_text"><h5>憑證編碼</h5><h5></h5><h5></h5><h5>未繳金額</h5></div>
+        <div id="text_sheet"></div>
+        <div id="credit_details">       
+        </div>
+        <div id="result">|#{result}</div>
+        <div id="hash">|#{tx_hash}</div>
+        <div id="button_items">
+        <a href="/repay" id='back_repay'><button id='back'>上一步</button><a href="/get_back" id='confirm_repay'><button id='confirm'>下一步-歸還平台幣</button></a>
+        </div>
+    </div>
+    </div>
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/repay/repay_platform.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/web3@0.2.5/dist/web3.min.js'></script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>選擇分券</title>
+  
+      <link rel="stylesheet" href="/stylesheets/funding_provider/choose_coupon.css">
+
+</head>
+
+<body>
+    <form action="" method="post">
+        <h2>請選擇分券與投資金額</h2>
+        <br>
+        <br>
+        <h1>此借貸憑證代號為：</h1>
+        <br>
+        <dd class="creditID" id="creditID" name="creditID">#{creditID}</dd>
+        <br>
+        <h1>選定的投資標的為：</h1>
+        <br>
+        <dd class="strategyID" id="strategyID" name="strategyID">#{strategyID}</dd>
+        <br>
+        <h1>此借貸欲借款金額為：</h1>
+        <br>
+        <dd class="funding_need" id="funding_need" name="funding_need">#{funding_need-now_matched_amount}</dd>
+        <br>
+        <h1>請輸入欲投資金額:</h1>
+        <br>
+        <input class="invest_amount" id="invest_amount" name="invest_amount"/>
+        <h1>請選擇分券類別</h1>
+        <br>
+        <select type="text" name="coupon_class" id="coupon_class">
+            <option value=1>Ａ券(5%)</option>
+            <option value=2>B券(2%)</option>
+            <option value=3>C券(1%)</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="確認">
+        <br>
+
+    </form>
+    <script src="" type="text/javascript"></script>
+
+</body>
+
+</html>

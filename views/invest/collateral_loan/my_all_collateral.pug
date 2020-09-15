@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>選擇標的</title>
+<style></style>
+<head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/invest/collateral_loan/my_all_collateral.css">
+    include ../../navigator/navigator.pug
+    <span>#{user}，以下是您的擔保品</span>
+    <table border="1"cellpadding="5">
+        <tr>
+            <th id="portfolio_id_header">已擁有投資組合編號</th>
+            <th id="portfolio_content_header">數量</th>
+            <th id="content">內容</th>
+            <th id="current_value_header">現值</th>
+            <th id="loan_rate＿header">月利率</th>
+            <th id="repay_header">還款方式</th>
+            <th id="choose">擔保品狀態</th>
+
+        </tr>
+        each x in data
+            <tr>
+            <form id="doinvest"action="?value=#{x.updated_price}" method="post">
+                <input type="hidden"id="rand_id" name="rand_id" value="#{x.randID}">
+                <td id="portfolio_id">
+                    <a href="" id="#{x.idtransaction_no}">#{x.idtransaction_no}</a>
+                </td>
+                <td id="portfolio_content">
+                    |#{x.investment_amount}
+                </td>
+                <td id="com_name">
+                    |#{x.com_name}
+                </td>
+                <td id="current_value">
+                    |#{x.updated_price}
+                </td>
+                <td id="loan_rate">
+                    |1%
+                </td>            
+                <td id="repay">
+                    |本利攤
+                </td>
+                <td id="choose">
+                    |#{x.collateral_status}
+                </td>
+            </form>
+            </tr>
+    </table>
+</body>
+    <script>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/invest/collateral_loan/my_all_collateral.js"></script>
+</html>

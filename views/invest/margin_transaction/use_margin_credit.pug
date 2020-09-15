@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>使用保證金憑證</title>
+<style></style>
+<head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/invest/margin_transaction/use_margin_credit.css">
+    include ../../navigator/navigator.pug
+    <table border="1"cellpadding="5" id="credit_table">
+        <tr>
+            <th id="credit_id_header">憑證編號</th>
+            <th id="init_avail_amount_header">初始可用額度</th>
+            <th id="strategyID_header">投資策略編號</th> 
+            <th id="use_amount_header">欲使用額度</th>
+            <th id="repay_rate_header">期數</th>
+        </tr>
+        each id in idlist    
+            <tr>
+            <form id="doinvest"action="" method="post">
+                <input type="hidden" id="rand_id" name="rand_id" value="#{id.randID}">
+                <td id="credit_id">
+                    |#{id.creditID}
+                </td>
+                <td id="init_value">
+                    |#{id.avail_amount_init}
+                </td>
+                <td id=strategyID>
+                    |#{id.strategyID}
+                </td>
+                <td id="use_amount">
+                    <input type="number" id="use_amount" name="use_amount">
+                </td>
+                <td>
+                    <select type="text" name="repay_rate" id="repay_rate">
+                        <option value=3>3期</option>
+                        <option value=6>6期</option>
+                        <option value=12>12期</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="submit" value="選擇"/>
+                </td>
+            </form>    
+            </tr>
+            
+    </table>
+    <button class="return_page"><a href="/margin_transaction">回前頁</a></button>
+</body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/invest/margin_transaction/use_margin_credit.js"></script>
+    <script src="/javascripts/invest/margin_transaction/creditABI.js" type="text/javascript"></script>
+</html>

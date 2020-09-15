@@ -1,0 +1,79 @@
+body {
+    background: #384047;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+form {
+    background: #fff;
+    padding: 4em 4em 2em;
+    width:600px;
+    height:500px;
+    position: absolute;
+    left:30%;
+    top:20%;
+    box-shadow: 0 0 1em #222;
+    border-radius: 2px;
+}
+
+    form h2 {
+        margin: 0 0 50px 0;
+        padding: 10px;
+        text-align: center;
+        font-size: 30px;
+        color: #666666;
+        border-bottom: solid 1px #e5e5e5;
+    }
+    form span{
+        font-size:25px;
+        position:absolute;
+        left:20%;
+    }
+    form label{
+        position:absolute;
+        left:30%;
+        font-size:20px;
+        color:#666666;
+    }
+    form dd{
+        font-size:15px;
+        color:#666666;
+        position:absolute;
+        left:30%;
+        margin:5px 0 0 10px
+    }
+    form input{
+        display:inline;
+        position:absolute;
+        left:25%;
+        width:250px;
+        font-size:30px;
+        margin:5px 0 0 10px
+    }
+    form input[type="submit"] {
+        display:inline;
+        color:#666;
+        position:absolute;
+        left:32%;
+        width:150px;
+        font-size:24px;
+        margin:5px 0 0 10px
+    }
+    form span[class="warn"]{
+        font-size:14px;
+        position:absolute;
+        left:25%;
+    }
+    form button{
+            background-color:#e7e7e7 ;
+            color: white;
+            position:absolute;
+            left:32%;
+            width:200px;
+            font-size:30px;
+            padding: 12px 28px;
+            text-align: center;
+            display: inline-block;
+            
+          }
+
+    

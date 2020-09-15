@@ -1,0 +1,108 @@
+<html>
+<meta charset="utf-8">
+<title>帳戶資料</title>
+<style></style>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/myaccount/myaccount.css">
+</head>
+<body>
+    include ../navigator/navigator.pug
+    <div class="topbar">
+    <div class="receipt_sheet_flowbar" id="receipt_sheet">
+    <div id="top_text"><h2>|帳戶資料</h2><img id="profile_image" src="/images/members/#{user}.jpg">
+    </div>   
+    <div id="upload_image">
+    <form id="upload" action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" accept="image/*" name="photo" >
+        <input type="submit" value="修改/上傳頭像">
+    </form></div>
+    <div class="text_box">
+        <dl>
+        <dd class="text_box_title" id="user_id">
+        |ID
+        </dd>
+        <dd class="text_box_content" id="user">
+        |#{user}
+        </dd>
+        </dl>
+        </div>
+        <div class="text_box">
+        <dl>
+        <dd class="text_box_title">
+        |使用者名稱
+        </dd>
+        <dd class="text_box_content" id="user_name">
+        |#{username}
+        </dd>
+        </dl>
+        </div>
+    <div class="text_box">
+        <dl>
+            <dd class="text_box_title">
+            |儲值錢包地址
+            </dd>
+            <dd class="text_box_content" id="wallet_address">
+            |#{wallet_address}
+            </dd>
+            </dl>
+            </div>
+            <div class="text_box">
+            <dl>
+            <dd class="text_box_title">
+            |Email (訊息通知)
+            </dd>
+            <dd class="text_box_content" id="email">
+            |#{email}
+            </dd>
+            </dl>
+            </div>
+            <div class="text_box">
+            <dl>
+            <dd class="text_box_title">
+            |生日
+            </dd>
+            <dd class="text_box_content" id="birthday">
+            |#{birthday}
+            </dd>
+            </dl>
+            </div>
+            <div class="text_box">
+            <dl>
+            <dd class="text_box_title">
+            |聯絡電話-家用
+            </dd>
+            <dd class="text_box_content" id="tel_phone">
+            |#{telphone}
+            </dd>
+            </dl>
+            </div>
+            <div class="text_box">
+            <dl>
+            <dd class="text_box_title">
+            |聯絡電話-個人
+            </dd>
+            <dd class="text_box_content" id="mobilephone">
+            |#{mobilephone}
+            </dd>
+            </dl>
+            </div>
+            <div class="text_box">
+            <dl>
+            <dd class="text_box_title">
+            |地址
+            </dd>
+            <dd class="text_box_content" id="address">
+            |#{address}
+            </dd>
+            </dl>
+            </div>
+
+    </div>
+</div>
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/myaccount/myaccount.js"></script>
+</html>

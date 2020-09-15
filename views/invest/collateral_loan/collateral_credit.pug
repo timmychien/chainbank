@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>信用憑證額度</title>
+<style></style>
+<head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/invest/collateral_loan/collateral_credit.css">
+    include ../../navigator/navigator.pug
+    //<h2>Version</h2>
+    //<p id="p1"></p>
+    //<h2>My account<h2>
+    //<p id="account"></p>
+    <form action="" method="post">
+        <h2>信用憑證額度</h2>
+        <div class="deposit">
+            <span>#{user}，您好！</span>
+            <br>
+            <br>
+            <br>
+            <label>您使用的策略是:</label><br/>
+            <br>
+            <dd class="content" id="porfolio_id">#{strategyID}</dd><br/>
+            <br>
+            <br>
+            <label for="credit_label">此策略之信用憑證額度:</label><br/>
+            <br>
+            <dd class="content" id="creditAmount">#{creditAmount}</dd><br/>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="button" value="確定使用" onclick="location.href='/not_used_credit'">
+            <br>
+            <span class="warn">#{warn}</span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </form>
+</body>
+    <script>
+        //var p1=document.getElementById("p1");
+        //p1.innerHTML=web3.version.api
+        //var account=document.getElementById("account");
+        //account.innerHTML=web3.eth.accounts[0]
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/invest/collateral_loan/collateral_credit.js"></script>
+</html>

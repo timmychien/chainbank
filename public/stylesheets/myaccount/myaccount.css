@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(207, 216, 212) ;
+}
+#top_text{
+    display: flex;
+}
+.top_flowbar{
+    height: 35px;
+    display: inline-block;
+}
+#profile_image{
+    height: 120px;
+    width: auto;
+    border-radius: 10px;
+    position: relative;
+    left:70%;
+    top:20px;
+}
+#receipt_sheet{
+    background-color: rgb(245, 245, 245);
+    width: 60%;
+    margin:0 auto;
+    margin-top: 50px;
+    height:1050px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+#receipt_sheet h2{
+    padding-left:30px;  
+    padding-top: 50px;  
+    margin-bottom: 10px;
+    height: 80px;
+    color:rgb(105, 105, 105);
+}
+.text_box_title{
+font-size: 18px;
+padding-top: 30px;
+padding-left: 35px;
+padding-bottom: 20px;
+}
+#user_id{
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-bottom: 20px;   
+}
+.text_box_content{
+    padding-left: 20px;   
+    font-size: 16px;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+}
+.text_box{
+    width: 50vw;
+    height: auto;
+}
+#upload_image{
+    width:60px;
+    height: auto;
+    position: relative;
+    left:80%;
+    padding-top: 20px;
+}

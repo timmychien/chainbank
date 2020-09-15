@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+  <title>投資市場-#{crypto}-USDT</title>
+  <style>html{visibility: hidden;opacity:0;}</style>
+    <head>
+  <body>
+  <link rel="stylesheet", href="/stylesheets/searchpage/crypto.css">
+  include ../navigator/navigator.pug
+  <div id="crypto_detail">
+  <div id="crypto_text">
+  <div id="price_box">
+  <h2 id="crypto_name"><div id="crypto_name_text">#{crypto}</div><h5>/USDT</h5></h2>
+  <div id="current_price_box"><h3 id="current_price_text">最新價格</h3><h3 id="current_price">loading</h3></div>
+  <div id="_24hr_change_box"><h3  id="_24hr_change_text">24hr 變動量</h3><h3 id="_24hr_change">loading</h3></div>
+  <div id="_24hr_high_box"><h3  id="_24hr_high_text">24hr 最高價</h3><h3 id="_24hr_high_price">loading</h3></div>
+  <div id="_24hr_low_box"><h3  id="_24hr_low_text">24hr 最低價</h3><h3 id="_24hr_low_price">loading</h3></div>  
+  </div>
+  </div>
+  <div id="middle_context">
+  <div id="trades">
+  <div id="trade_text">
+  <div id="trade_top_text">
+  <div id="price-text">價格</div><div id="qty-text">#{crypto}量</div><div id="quoteQty-text">USDT量</div>
+  </div>
+  <div id="trades-1"><div id="price-1">...</div><div id="qty-1">...</div><div id="quoteQty-1">...</div></div>
+  <div id="trades-2"><div id="price-2">...</div><div id="qty-2">...</div><div id="quoteQty-2">...</div></div>
+  <div id="trades-3"><div id="price-3">...</div><div id="qty-3">...</div><div id="quoteQty-3">...</div></div>
+  <div id="trades-4"><div id="price-4">...</div><div id="qty-4">...</div><div id="quoteQty-4">...</div></div>
+  <div id="trades-5"><div id="price-5">...</div><div id="qty-5">...</div><div id="quoteQty-5">...</div></div>
+  <div id="trades-6"><div id="price-6">...</div><div id="qty-6">...</div><div id="quoteQty-6">...</div></div>
+  <div id="trades-7"><div id="price-7">...</div><div id="qty-7">...</div><div id="quoteQty-7">...</div></div>
+  <div id="trades-8"><div id="price-8">...</div><div id="qty-8">...</div><div id="quoteQty-8">...</div></div>
+  <div id="trades-9"><div id="price-9">...</div><div id="qty-9">...</div><div id="quoteQty-9">...</div></div>
+  <div id="trades-10"><div id="price-10">...</div><div id="qty-10">...</div><div id="quoteQty-10">...</div></div>
+  <div id="trades-11"><div id="price-11">...</div><div id="qty-11">...</div><div id="quoteQty-11">...</div></div>
+  <div id="trades-12"><div id="price-12">...</div><div id="qty-12">...</div><div id="quoteQty-12">...</div></div>
+  </div>
+  </div>  
+  <div id="kline_chart">
+  <div id="buybox">
+  <div id="change_to_twd">
+  <div id="change_to_twd_text">即時 #{crypto} 兌換台幣</div>
+  <input id="change_twd" value='0' disabled>
+  </div>
+  <div id="unit">
+  <div id="unit_text">購買數量</div>
+  <input id="few_buy_price" value=1>
+  </div>
+  <a id="buy_crypto" href="#"><button id="buy_button">購買 #{crypto}</button></a>
+  <button id="put_button">收藏 #{crypto}</button>
+  </div> 
+  <button id="hour">HOUR</button>
+  <button id="day">DAY</button>
+  <button id="month">MONTH</button>
+  <button id="year">YEAR</button>
+  <div id="tvchart"></div>
+  </div>  
+  <div id="symbols">
+  <div id="avgPrice_text">五分鐘內平均價格</div>
+  <div id="avgPrice"> ...</div>
+  <div id="open_price_text">24小時開盤價</div>
+  <div id="open_price"> ...</div>
+  <div id="volume_text">24小時#{crypto}市場交易量</div>
+  <div id="volume"> ...</div>
+  <div id="volume_text">24小時USDT市場交易量</div>
+  <div id="quote_volume"> ...</div>
+  </div>
+
+  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+  <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script type="text/javascript" src="/javascripts/searchpage/crypto.js"></script>
+</html>

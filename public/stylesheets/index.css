@@ -1,0 +1,124 @@
+html {
+    visibility: visible;
+    opacity: 1;
+}
+p{
+    font-size: 17px
+}
+#price_box{
+    display: flex;
+    margin-top: 50px;
+}
+#crypto_text{
+    width:680px;
+    margin: auto;
+}
+#crypto_name{
+    font-family: 'Lucida Sans';   
+    color:rgb(41, 41, 41); 
+}
+#close_price_text,#current_price_text,#_24hr_change_text,#_24hr_high_text,#_24hr_low_text{
+    font-size: 14px;
+    color:rgb(148, 147, 147);
+    font-weight: 500;
+    font-family: 'Lucida Sans';
+}
+#last_close_price,#current_price,#_24hr_change,#_24hr_high_price,#_24hr_low_price{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Lucida Sans';
+    padding-top: 10px;
+    padding-left: 2px;
+    color:rgb(68, 68, 68);
+}
+
+#close_price_box,#current_price_box,#_24hr_change_box,#_24hr_high_box,#_24hr_low_box{
+    margin-left: 20px;
+    width:100px;
+    height:60px;
+}
+#trades-1,#trades-2,#trades-3,#trades-4,#trades-5,#trades-6,#trades-7,#trades-8,#trades-9,#trades-10{
+    display: flex;
+    justify-content:space-between ;
+    width: 300px;
+    border-bottom: 0.05px gainsboro solid;
+    margin-top: 8px;
+    position:relative;
+}
+#trades-11,#trades-12,#trades-13,#trades-14,#trades-15,#trades-16,#trades-17,#trades-18,#trades-19,#trades-20{
+    display: flex;
+    justify-content:space-between ;
+    width: 300px;
+    border-bottom: 0.05px gainsboro solid;
+    margin-top: 8px;
+    position:relative;
+}
+#trade_top_text{
+    display: flex;
+    justify-content:space-between ;
+    width: 300px;
+    font-size: 15px;
+    color:rgb(168, 168, 168);
+}
+#trades{
+    border: 0.05px gainsboro solid;
+    width:340px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+#middle_context{
+    display: flex;
+    margin: auto;
+    padding-left: 3%;
+}
+#price-text,#qty-text{
+    width:60px;
+}
+#quoteQty-text{
+    width:80px;
+}
+#kline_chart{
+    width: 640px;
+    height: 300px;
+    background-color: rgb(248, 247, 247);
+    margin-left: 2%;
+}
+#year,#month,#day,#hour{
+    font-family: 'Lucida Sans';
+    border: 0.05px solid rgb(218, 215, 215);
+    background-color: rgb(223, 222, 222);
+}
+#hour{
+    font-family: 'Lucida Sans';
+    border: 0.05px solid rgb(218, 215, 215);
+    background-color: rgb(129, 199, 170);
+}
+#buybox{
+    border: 0.06px solid rgb(236, 236, 236);
+    width:640px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    height: 130px;
+    
+}
+#symbols{
+    margin-top:400px;
+}
+#promise_value{
+    height: 30px;
+    width:150px;
+    border-radius: 40px;
+    border: 0.05px solid gainsboro;
+    text-align: center;
+    font-size: 15px;
+    box-shadow:  5px 3px 3px gainsboro;
+}
+#promise_value:hover{
+    border: 0.05px solid rgb(187, 187, 187);
+    box-shadow:  5px 3px 3px rgb(202, 201, 201);
+}
+#promise_value:focus {
+    border:2px solid rgb(114, 167, 99);
+    box-shadow:  1px 1px 1px rgb(173, 219, 167);
+  }

@@ -1,0 +1,103 @@
+body{
+    background-color: rgb(207, 224, 217) ;
+}
+
+.top_flowbar{
+    height: 35px;
+    display: inline-block;
+}
+#select_credit_or_margin_text{
+    width: 25%;
+    margin-top: 10vh;
+    margin-left: 13vw;
+    background-color: #2d8871;
+    color: snow;
+    border-radius: 5px 0px 0px 5px;
+    border-left-width: 5px;
+    border-left:solid;
+    border-left-color:snow ;
+}
+
+#select_credit_or_margin_text:after {
+    content: "";
+    /* 四邊透明的 border */
+    border: transparent 10px solid;
+    /* 將其中一補上色彩 */
+    border-top-color: #00cc99;
+  }
+#select_credit_or_margin_text h4{
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 30%;
+    padding-top: 7px;
+}
+#select_makeup{
+    width: 20%;
+    margin-top: 10vh;
+    margin-left: 5vw;
+    background-color: #7eb4a7;
+    color: snow;
+    border-radius: 5px 0px 0px 5px;
+    border-left-width: 5px;
+    border-left:solid;
+    border-left-color:snow ;
+}
+#select_makeup h4{
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 25%;
+    padding-top: 7px;
+}
+#makeup{
+    width: 20%;
+    margin-top: 10vh;
+    margin-left: 5vw;
+    background-color: #7eb4a7;
+    color: snow;
+    border-radius: 5px 0px 0px 5px;
+    border-left-width: 5px;
+    border-left:solid;
+    border-left-color:snow ;
+}
+#makeup h4{
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 30%;
+    padding-top: 7px;
+}
+.topbar{
+    display: flex;
+}
+#select_credit_or_margin{
+    height: 80vh;
+    width: 80%;
+    margin-left: 9vw;
+    margin-top: 30px;
+    background-color: rgb(241, 240, 240);
+    border-radius: 5px 5px;
+}
+#credit_or_margin_sheet{
+    width: 60%;
+    margin-left: 10vw;
+    top:280px;
+    height:auto ;
+    position: absolute;
+}
+.top_text{    
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-right: 8%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    font-size: 15px;
+    color:grey;
+}
+.credit_link>a { 
+    background-color: rgb(253, 253, 253);
+ }
+
+.credit_link>a:hover { 
+    background-color: rgb(248, 248, 248);
+ }

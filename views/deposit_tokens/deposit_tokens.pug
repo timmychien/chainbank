@@ -1,0 +1,69 @@
+<html>
+<meta charset="utf-8">
+<title>儲值平台幣</title>
+<style></style>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/deposit_tokens/deposit_tokens.css">
+</head>
+<body>
+    include ../navigator/navigator.pug
+    <div class="topbar">
+    <div class="deposit_tokens_sheet" id="deposit_tokens_sheet">
+    <div class="top"><div class="topic">|儲值平台幣</div><div id="balance">目前持有： #{balance} 個平台幣</div></div>
+    <div class="text_box">
+            <form id="formCreditCard" method="post" accept-charset="UTF-8" action="https://payment-stage.opay.tw/Cashier/AioCheckOut/V5">
+            <div id="hidden_tag">
+            |MerchantID 商店代號: 
+            <input type="hidden" id="MerchantID" name="MerchantID" value="2000132" ><br>
+            |MerchantTradeNo 商店交易編號: 
+            <input type="hidden" id="MerchantTradeNo" name="MerchantTradeNo"><br>
+            |MerchantTradeDate 商店交易時間: 
+            <input type="hidden" id="MerchantTradeDate" name="MerchantTradeDate"><br>
+            |PaymentType 交易類型: 
+            <input type="hidden" id="PaymentType" name="PaymentType" value="aio" ><br>
+            |TradeDesc 交易描述: 
+            <input type="hidden" id="TradeDesc" name="TradeDesc" value="NTD to Tokens" ><br>
+            |ItemName 商品名稱: 
+            <input type="hidden" id="ItemName" name="ItemName" value="Tokens" ><br>
+            |ReturnURL 付款完成通知回傳網址: 
+            <input type="hidden" id="ReturnURL" name="ReturnURL" value="https://developers.opay.tw/AioMock/MerchantReturnUrl" ><br>
+            |ChoosePayment 預設付款方式: 
+            <input type="hidden" id="ChoosePayment" name="ChoosePayment" value="Credit" ><br >
+            |會員商店代碼: 
+            <input type="hidden" id="StoreID" name="StoreID" value="" ><br >
+            |OrderResultURL Client端返回廠商網址: 
+            <input type="hidden" id="OrderResultURL" name="OrderResultURL" value="http://115.43.135.69:3040/receipt"><br>
+            |CreditInstallment 刷卡分期期數: 
+            <input type="hidden" id="CreditInstallment" name="CreditInstallment" value=""><br>
+            |InstallmentAmount 使用刷卡分期的付款金額: 
+            <input type="hidden" id="InstallmentAmount" name="InstallmentAmount" value=""><br>0
+            |Redeem 信用卡是否使用紅利折抵: 
+            <input type="hidden" id="Redeem" name="Redeem" value=""><br>
+            |CheckMacValue 簽章類型: 
+            <input type="hidden" id="EncryptType" name="EncryptType" value="1"><br>
+            |CheckMacValue 檢查碼: 
+            <input type="hidden" id="CheckMacValue" name="CheckMacValue"><br>
+            <p id="hash" ></p>
+            </div>
+            <div id="change_type" class="topic_text">輸入儲值金額：</div> 
+            <input id="TotalAmount" name="TotalAmount" type="number" value=30 min=30 step=1 >個平台幣<input type="submit" value="一鍵儲值" id="confirm_submit"><br>
+            <div id="change_type" class="topic_text">平台幣名稱：</div> 
+            <div id="change_type_text" class="text_text">proj_t2</div>
+            <div id="change_type" class="topic_text">平台幣合約地址：</div>
+            <div id="change_type_text" class="text_text"><a href="https://rinkeby.etherscan.io/token/0xf6daae7777472be83633329c2733a9246ab6a1b1">0xf6daae7777472be83633329c2733a9246ab6a1b1</a></div>
+            <div id="change_type" class="topic_text">平台幣兌換比率：</div>
+            <div id="change_type_text" class="text_text">1元新台幣 : 1個平台幣</div>
+            </form>
+            </div>
+            </form>    
+    </div>
+    </div>
+</div>
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/deposit_tokens/deposit_tokens.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/web3@0.2.5/dist/web3.min.js'></script>
+</html>

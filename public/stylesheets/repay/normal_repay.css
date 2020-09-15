@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f1f1f1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 80%;
+  display: flex;
+  margin: 30px auto 0px;
+}
+
+input.searchTerm:disabled{
+  width: 30%;
+  border: 3px solid rgb(231, 231, 231);
+  background: #ffffff;
+  padding: 5px;
+  height: 50px;
+  outline: none;
+  color: #618172;
+  font-size: 16px;
+}
+input.searchTerm2:disabled{
+  width: 55%;
+  border: 3px solid rgb(231, 231, 231);
+  background: #ffffff;
+  padding: 5px;
+  height: 50px;
+  outline: none;
+  color: #618172;
+  font-size: 16px;
+}
+
+
+.searchButton {
+  width: 150px;
+  height: 50px;
+  border: 1px solid rgb(83, 146, 130);
+  background: rgb(141, 180, 172);
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 65%;
+  position: relative;
+  margin: 90px auto -30px;
+}
+#invest_text{
+    width: 80%;
+    position: relative;
+    display: flex;
+    padding:20px;
+    padding-left: 15px;
+    padding-right: 45px;
+    justify-content: space-between;
+    top: 120px;
+    left: 10%;
+    background-color: #adbeb3;
+    color:rgb(252, 252, 252);
+    font-weight: bold;
+    border-radius: 10px 10px 0 0 ;
+
+}
+#invest_details{
+    width: 85%;
+    position: relative;
+    top: 120px;
+    margin: 0 auto;
+    color:rgb(71, 71, 71);
+    font-weight: 500;
+    font-size: 16px;
+    height:500px;
+    overflow: auto;
+    margin-bottom: 200px;
+}
+table{
+  font-size: 18px;
+  width: 100%;
+  position: relative;
+}
+tr{
+  border:0.05px grey solid;
+  height:30px;  
+}
+td{
+  border:0.05px grey solid;
+  text-align: center; 
+  font-size: 18px;
+}
+th{
+  padding: 10px;
+  background-color: #adbeb3;
+  height: 45px;
+  border-style: none;
+  color:rgb(252, 252, 252);
+  border:0px white;
+}
+#name_text,#requirementID{
+  font-size: 16px;
+    width:80px;
+}
+#price_text{
+  font-size: 16px;
+    width:100px;
+}
+#change_text{
+  font-size: 16px;
+    width:150px;
+}
+#low_text{
+  font-size: 16px;
+    width:90px;
+}
+#high_text{
+  font-size: 16px;
+    width:92px;
+}
+#bottom_buttons{
+  width: 65%;
+  position: relative;
+  padding:10px;
+  top: 170px;
+  left: 17.5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.bottom_page{
+  color: snow;
+  background-color: rgb(123, 206, 177);
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  border: #69966b 0.05px solid;
+  font-size: 15px;
+  font-weight: bold;
+}
+select{
+  width:150px;
+  height: 40px;
+  font-size: 18px;
+  border: 0.08px rgb(214, 214, 214) solid;
+  background-color:rgb(255, 255, 255);
+  border-radius: 5px;
+
+}
+
+/* turn it off completely */
+select:active, select:hover {
+  outline: none
+}
+
+/* make it red instead (with with same width and style) */
+select:active, select:hover {
+  outline-color: rgb(88, 170, 88)
+}
+.invest_items.active{
+  background-color: rgb(248, 248, 248);
+}
+#set_amount{
+  width: 80%;
+  height: 30px;
+  font-size: 18px;
+  text-align: center;
+  color:grey;
+}
+#repay{
+  width: 80%;
+  height: 80%;
+  font-size: 16px;
+  text-align: center;  
+}
+#set_amount{
+  width: 100px;
+}
+#user_information{
+  display: flex;
+}

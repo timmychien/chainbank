@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Repay progress</title>
+<style></style>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/repay/already_paid.css">
+</head>
+<body>                    
+    include ../navigator/navigator.pug
+    <div id="repay_list">
+    <div id="page_topic"><h2>還款明細</h2><a id="back" href="/normal_repay"><button>返回</button></a></div>
+    <div id="Receipt" class="topic">還款證明:</div>
+    <div id="Receipt_text" class="text"><a  id="receipt_hash_link" href="#{contract_hash}">#{contract_hash.slice(0,30)+'...'+contract_hash.slice(-10)}</a></div>
+    <div id="Receipt_status" class="topic">還款狀態:</div>
+    <div id="Receipt_status_text" class="text">#{status}</div>
+    <div id="paid_start_time" class="topic">送出還款時間:</div>
+    <div id="paid_start_time_text" class="text">#{start_time}</div>
+    <div id="repayment_amount" class="topic">還款金額:</div>
+    <div id="repayment_amount_text" class="text">#{amount} 平台幣</div>
+    </div>  
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/repay/already_paid.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/web3@0.2.5/dist/web3.min.js'></script>
+</html>

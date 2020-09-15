@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Use Credit Confirm</title>
+  
+      <link rel="stylesheet" href="/stylesheets/invest/margin_transaction/directly_use_credit.css">
+
+</head>
+
+<body>
+
+    <form action="directly_use_credit" method="post">
+        <h2>使用憑證確認</h2>
+        <br>
+        <br>
+        <br>
+        <h1>您的憑證代號為：</h1>
+        <br>
+        <br>
+        <dd class="creditID" id="creditID" name="creditID">#{creditID}</dd>
+        <br>
+        <br>
+        <h1>您選定的投資策略為：</h1>
+        <br>
+        <br>
+        <dd class="strategyID" id="strategyID" name="strategyID">#{strategyID}</dd>
+        <br>
+        <br>
+        <h1>您的憑證額度為：</h1>
+        <br>
+        <br>
+        <dd class="use_amount" id="use_amount" name="use_amount">#{use_amount}</dd>
+        <br>
+        <br>
+        <h1>請選擇還款期數</h1>
+        <br>
+        <br>
+        <select type="text" name="repay_rate" id="repay_rate">
+            <option value=3>3期</option>
+            <option value=6>6期</option>
+            <option value=12>12期</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="確認">
+        <br>
+
+    </form>
+    <script src="/javascripts/invest/margin_transaction/directly_use_credit.js" type="text/javascript"></script>
+
+</body>
+
+</html>

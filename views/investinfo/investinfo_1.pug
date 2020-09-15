@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>借貸查詢</title>
+<style></style>
+<head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/investinfo/investinfo_1.css">
+    include ../navigator/navigator.pug
+    <form action="" method="post">
+    <h2>借貸查詢</h2><br/>
+      <div class="search">
+        <select name="search" id=search>
+          <option value="contract_num">借款編號
+          <option value="interest_percentage">利率
+          <option value="repay">每期還款
+          <option value="periods">期數
+          <option value="margin">保證金
+        </select>
+      <select name="colterm" id="colterm" class="form-control input-sm">
+        <option value="gt">大於</option>
+        <option value="ge">大於或等於</option>
+        <option value="eq">等於</option>
+        <option value="le">小於或等於</option>
+        <option value="lt">小於</option>
+      </select>
+        <input type="text" name="inputs" id="inputs" placeholder="請輸入要查詢的關鍵字" size="20" value="" />
+        <input type="submit" value="查詢"/>
+      </div>
+    </form>
+    <div class="form-group">
+      <table border="2">
+        <tr>
+          <th>編號</th>
+          <th>借款金額</th>
+          <th>維持率</th>
+          <th>市價</th>
+          <th>借款狀態</th>
+          <th>每期還款</th>
+          <th>期數</th>
+          <th>開始日期</th>
+          <th>憑證類別</th>
+          <th>媒合狀態</th>
+          <th>詳細資料</th>
+        </tr>
+
+        if(data)
+          each x in data
+            <tr>
+              <input type="hidden" id ="requirement_#{x.requirementID}">
+              <form id="search" action="" method="post">
+                <td id="contract_num">
+                    |#{x.rand}
+                </td>
+                <td id="loan_amount">
+                    |#{x.funding_need}
+                </td>
+                <td class="keep_rate" id="keep_rate_#{x.requirementID}">
+                    |--
+                </td>
+                <td class="market_price" id="market_price_#{x.requirementID}">
+                    |--
+                </td>
+                <td class="status" id="status_#{x.requirementID}">
+                    |--
+                </td>
+                <td id="repay">
+                    |#{parseInt(x.funding_need/x.rate_times)}
+                </td>
+                <td id="periods">
+                    |#{x.rate_times}
+                </td>
+                <td id="start_date">
+                    |#{x.create_date}
+                </td>
+                <td id="credit_type">
+                    |#{x.credit_type}
+                </td>
+                <td id="matched_status">
+                    |#{x.match_status}
+                </td>
+                if x.match_status=="true"
+                  <td id="details">
+                    |<a href="/normal_repay">詳細資料</a>
+                  </td>
+                else
+                  <td>
+                  </td>
+              </form>
+            </tr>
+      </table>
+    </div>
+</body>
+</head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/investinfo/investinfo_1.js"></script>
+</html>

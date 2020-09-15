@@ -1,0 +1,86 @@
+<html>
+<meta charset="utf-8">
+<title>Makeup</title>
+<style></style>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/makeup/makeupconfirm.css">
+</head>
+<body>
+    include ../navigator/navigator.pug
+    <div class="topbar">
+    <div class="top_flowbar" id="select_credit_or_margin_text">
+    <h4>(1) 選擇憑證</h4></div>
+    <div class="top_flowbar" id="select_makeup">
+    <h4>(2) 確認憑證訊息</h4></div>    
+    <div class="top_flowbar" id="makeup">
+    <h4>(3) 繳納全額</h4></div>
+    </div>
+    </div>
+    <div id="select_credit_or_margin">
+    <div id="credit_or_margin_sheet">
+        <div class="top_text"><h5>憑證編碼</h5><h5></h5><h5></h5><h5>未繳金額</h5></div>
+        <div id="text_sheet"></div>
+        <div id="credit_details">
+        <div id="current_tokens">
+        <div id="current_tokens_text">錢包儲值金額</div>
+        <div id="current_tokens_num">
+        |#{numoftokens} Tokens
+        </div>
+        </div>
+        <div id="need_tokens">
+        <div id="need_tokens_text">尚缺儲值金額</div>
+        <div id="need_tokens_num">
+        |#{not_pay} Tokens
+        </div>
+        </div>        
+        </div>
+        <form id="formCreditCard" method="post" accept-charset="UTF-8" action="https://payment-stage.opay.tw/Cashier/AioCheckOut/V5">
+            <div id="hidden_tag">
+            |MerchantID 商店代號: 
+            <input type="hidden" id="MerchantID" name="MerchantID" value="2000132" ><br>
+            |MerchantTradeNo 商店交易編號: 
+            <input type="hidden" id="MerchantTradeNo" name="MerchantTradeNo"><br>
+            |MerchantTradeDate 商店交易時間: 
+            <input type="hidden" id="MerchantTradeDate" name="MerchantTradeDate"><br>
+            |PaymentType 交易類型: 
+            <input type="hidden" id="PaymentType" name="PaymentType" value="aio" ><br>
+            |TotalAmount 交易金額: 
+            <input type="hidden" id="TotalAmount" name="TotalAmount" value="#{not_pay}" ><br>
+            |TradeDesc 交易描述: 
+            <input type="hidden" id="TradeDesc" name="TradeDesc" value="NTD to Tokens" ><br>
+            |ItemName 商品名稱: 
+            <input type="hidden" id="ItemName" name="ItemName" value="Tokens" ><br>
+            |ReturnURL 付款完成通知回傳網址: 
+            <input type="hidden" id="ReturnURL" name="ReturnURL" value="https://developers.opay.tw/AioMock/MerchantReturnUrl" ><br>
+            |ChoosePayment 預設付款方式: 
+            <input type="hidden" id="ChoosePayment" name="ChoosePayment" value="Credit" ><br >
+            |會員商店代碼: 
+            <input type="hidden" id="StoreID" name="StoreID" value="" ><br >
+            |OrderResultURL Client端返回廠商網址: 
+            <input type="hidden" id="OrderResultURL" name="OrderResultURL" value="http://140.119.19.38:3040/receipt"><br>
+            |CreditInstallment 刷卡分期期數: 
+            <input type="hidden" id="CreditInstallment" name="CreditInstallment" value=""><br>
+            |InstallmentAmount 使用刷卡分期的付款金額: 
+            <input type="hidden" id="InstallmentAmount" name="InstallmentAmount" value=""><br>0
+            |Redeem 信用卡是否使用紅利折抵: 
+            <input type="hidden" id="Redeem" name="Redeem" value=""><br>
+            |CheckMacValue 簽章類型: 
+            <input type="hidden" id="EncryptType" name="EncryptType" value="1"><br>
+            |CheckMacValue 檢查碼: 
+            <input type="hidden" id="CheckMacValue" name="CheckMacValue"><br>
+            <p id="hash" ></p>
+            </div>
+            <input type="submit" value="一鍵補足金額" id="confirm_submit"></form>
+        <div id="button_items">
+        <a href="/makeuppayment" id='back_makeup'><button id='back'>上一步</button><a href="/makeupreceipt" id='confirm_makeup'><button id='confirm'>Send All to platform</button></a>
+        </div>
+    </div>
+    </div>
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/repay/repay_confirm.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/web3@0.2.5/dist/web3.min.js'></script>
+</html>

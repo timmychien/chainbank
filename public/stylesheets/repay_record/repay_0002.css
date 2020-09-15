@@ -1,0 +1,47 @@
+.search {
+    margin-bottom:15px;
+   }
+  
+  .form-group {
+    position:absolute;
+    top:  15%;
+    left: 8%;
+    width:1000px;
+   }
+
+
+table{
+  width:auto;
+  height:auto;
+  position:absolute;
+  top:20%;
+  left:10%;
+  border-collapse:collapse;
+}
+table th{
+  background-color: #a4dcec;
+  border:3px solid #000 ;
+  width:150px;
+  height:32px;
+  font-size:20px;
+  text-align:center;
+}
+table td{
+  border:3px solid #000 ;
+  height:auto;
+  text-align: center;
+  font-size:18px;
+}
+table td input[type="value"]{
+  font-size:20px;
+  width:150px;
+  opacity: 10;
+}
+table td input[type="submit"]{
+  display:inline;
+  font-size:24px;
+  width:80px;
+  margin:5px 0 0 10px;
+}
+  
+tr:nth-child(even) {background-color: #f2f2f2;}

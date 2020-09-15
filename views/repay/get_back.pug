@@ -1,0 +1,47 @@
+<html>
+<meta charset="utf-8">
+<title>取得贖回權</title>
+<style></style>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/repay/get_back.css">
+</head>
+<body>
+    include ../navigator/navigator.pug
+    <div id="select_credit_or_margin">
+    <div id="get_ownership">
+        <h2 id="get_credit_ownership_text">||贖回權詳細資訊</h2>
+    </div>    
+    <div id="credit_id">
+    <div id="credit_id_text">
+    <h2>贖回憑證ID</h2>
+    </div>
+    <h3>#{credit}</h3>
+    </div>
+    <div>
+    <div id="tx_hash">
+    <div id="tx_hash_text">
+    <h2>交易hash</h2>
+    </div>
+    <h3>#{tx_hash}</h3>
+    </div>
+    </div>
+    <div id="tx_hash_link">
+    <div id="tx_hash_link_text">
+    <h2>交易完成網址</h2>
+    </div>
+    <a id="hash_link" href="#{tx_page}" target="_blank"><h3>#{tx_page}</h3></a>
+    </div>
+    <div id="credit_or_margin_sheet">
+        <div id="button_items">
+        <a href="/get_target_back" id='get_target_back'><button id='back'>立刻贖回</button></a>
+        </div>
+    </div>
+    </div>
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/repay/get_back.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/web3@0.2.5/dist/web3.min.js'></script>
+</html>

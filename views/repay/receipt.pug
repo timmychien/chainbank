@@ -1,0 +1,123 @@
+<html>
+<meta charset="utf-8">
+<title>儲值兌換收據</title>
+<style></style>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/repay/receipt.css">
+</head>
+<body>
+    include ../navigator/navigator.pug
+    <div class="topbar">
+    <div class="receipt_sheet_flowbar" id="receipt_sheet">
+    <h2>|儲值收據-本次兌換明細</h2>
+    <div class="text_box">
+        <dl>
+        <dd class="text_box_title">
+        |此次交易編碼
+        </dd>
+        <dd class="text_box_content" id="hash">
+        |#{tx_hash}
+        </dd>
+        </dl>
+        </div>
+        <div class="text_box">
+        <dl>
+        <dd class="text_box_title">
+        |此次交易網址記錄
+        </dd>
+        <dd class="text_box_content" id="tx_page">
+            <a href="#{tx_page}" target="_blank">#{tx_page}</a>
+        </dd>
+        </dl>
+        </div>
+    <div class="text_box">
+        <dl>
+            <dd class="text_box_title">
+            |交易日期
+            </dd>
+            <dd class="text_box_content" id="date">
+            |#{date}
+            </dd>
+            </dl>
+            </div>
+            <div class="text_box">
+            <dl>
+            <dd class="text_box_title">
+            |兌換型態
+            </dd>
+            <dd class="text_box_content" id="type">
+            |Cash to Tokens
+            </dd>
+            </dl>
+            </div>
+            <div class="text_box">
+            <dl>
+            <dd class="text_box_title">
+            |交易貨幣
+            </dd>
+            <dd class="text_box_content" id="dollar">
+            |NTD
+            </dd>
+            </dl>
+            </div>
+            <div class="text_box">
+            <dl>
+            <dd class="text_box_title">
+            |付款方式
+            </dd>
+            <dd class="text_box_content" id="payment_type">
+            |#{payment_type}
+            </dd>
+            </dl>
+            </div>
+            <div class="text_box">
+            <dl>
+            <dd class="text_box_title">
+            |交易金額
+            </dd>
+            <dd class="text_box_content" id="total_exchange">
+            |#{total_exchange}元
+            </dd>
+            </dl>
+            </div>
+            <div class="text_box">
+            <dl>
+            <dd class="text_box_title">
+            |刷卡手續費
+            </dd>
+            <dd class="text_box_content" id="fee">
+            |#{fee}元
+            </dd>
+            </dl>
+            </div>
+            <div class="text_box">
+            <dl>
+            <dd class="text_box_title">
+            |儲值兌換的Token數量
+            </dd>
+            <dd class="text_box_content" id="num_token">
+            |#{total_exchange}
+            </dd>
+            </dl>
+            </div>
+            <div class="text_box">
+            <dl>
+            <dd class="text_box_title">
+            |交易結果
+            </dd>
+            <dd class="text_box_content" id="result">
+            |#{result}
+            </dd>
+            </dl>
+            </div>
+
+    </div>
+</div>
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/repay/receipt.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/web3@0.2.5/dist/web3.min.js'></script>
+</html>

@@ -1,0 +1,181 @@
+html {
+    visibility: visible;
+    opacity: 1;
+}
+#price_box{
+    display: flex;
+    margin: 8% auto 1%;
+}
+#crypto_text{
+    width:640px;
+    margin: 3% auto 0px;    
+    padding-left: 47px;
+}
+#crypto_name{
+    font-family: 'Lucida Sans';   
+    color:rgb(41, 41, 41); 
+}
+#close_price_text,#current_price_text,#_24hr_change_text,#_24hr_high_text,#_24hr_low_text{
+    font-size: 16px;
+    color:#949393;
+    font-weight: 500;
+    font-family: 'Lucida Sans';
+}
+#last_close_price,#current_price,#_24hr_change,#_24hr_high_price,#_24hr_low_price{
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Lucida Sans';
+    padding-top: 10px;
+    padding-left: 2px;
+    color:rgb(68, 68, 68);
+}
+
+#close_price_box,#current_price_box,#_24hr_change_box,#_24hr_high_box,#_24hr_low_box{
+    margin-left: 24px;
+    width:100px;
+    height:60px;
+}
+#trades-1,#trades-2,#trades-3,#trades-4,#trades-5,#trades-6,#trades-7,#trades-8,#trades-9,#trades-10{
+    display: flex;
+    justify-content:space-evenly ;
+    border-top: 0.05px gainsboro solid ;
+    margin-top: 10px;
+    padding-top: 10px;
+    position:relative;
+}
+#trades-11,#trades-12,#trades-13,#trades-14,#trades-15,#trades-16,#trades-17,#trades-18,#trades-19,#trades-20{
+    display: flex;
+    justify-content:space-evenly ;
+    border-top: 0.05px gainsboro solid ;
+    padding-top: 10px;
+    margin-top: 10px;
+    position:relative;
+}
+#trade_top_text{
+    display: flex;
+    justify-content:space-evenly ;
+    width: 100%;
+    font-size: 18px;
+    padding-left: 30x;
+    margin-right: 28px;
+    margin-top: 8px;
+    color:rgb(168, 168, 168);
+}
+#trades{
+    border: 0.05px gainsboro solid;
+    width:25%;
+    margin: 10px;
+    margin-left: 1%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+#middle_context{
+    display: flex;
+    margin: auto;
+    padding-left: 3%;
+}
+#price-text,#qty-text{
+    width:60px;
+}
+#quoteQty-text{
+    width:80px;
+}
+#kline_chart{
+    width: 800px;
+    height: 300px;
+    background-color: rgb(248, 247, 247);
+    margin-left: 2%;
+}
+#year,#month,#day,#hour{
+    font-family: 'Lucida Sans';
+    border: 0.05px solid rgb(218, 215, 215);
+    background-color: rgb(223, 222, 222);
+}
+#hour{
+    font-family: 'Lucida Sans';
+    border: 0.05px solid rgb(218, 215, 215);
+    background-color: rgb(129, 199, 170);
+}
+#buybox{
+    border: 0.06px solid rgb(236, 236, 236);
+    width:800px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    height: 130px;
+    display: flex;
+    
+}
+#promise_value{
+    height: 30px;
+    width:150px;
+    border-radius: 40px;
+    border: 0.05px solid gainsboro;
+    text-align: center;
+    font-size: 15px;
+    box-shadow:  5px 3px 3px gainsboro;
+}
+#promise_value:hover{
+    border: 0.05px solid rgb(187, 187, 187);
+    box-shadow:  5px 3px 3px rgb(202, 201, 201);
+}
+#promise_value:focus {
+    border:2px solid rgb(114, 167, 99);
+    box-shadow:  1px 1px 1px rgb(173, 219, 167);
+  }
+#change_to_twd_text{
+    padding-left: 75px;
+}
+#unit_text{
+    padding-left: 60px;
+}
+#unit_text{
+    text-align: center;
+}
+#change_twd{
+    margin-left: 75px;
+    width:134px;
+    height: 30px;
+    text-align:center;
+    margin-top: 18px;
+}
+#few_buy_price{
+    margin-left: 60px;
+    width:134px;
+    height: 30px;
+    text-align:center;
+    margin-top: 18px;
+}
+
+#buy_button,#put_button{
+    width: 100px;
+    height: 50px;
+    text-align:center;    
+    margin-left:50px ;
+    margin-top: 10px;
+}
+#buybox{
+    text-align: center;
+    padding-top: 35px;
+}
+#symbols{
+    position: relative;
+    margin-left: 20px;
+    margin-top: 18px;
+    width:25%;
+    height:100px;
+    background-color: rgb(252, 252, 252);
+}
+#avgPrice_text,#volume_text,#open_price_text{
+font-size: 18px;
+color: rgb(143, 143, 143);
+padding-bottom: 15px;
+padding-top: 20px;
+}
+#avgPrice,#volume,#quote_volume,#open_price{
+    font-size: 16px;
+    color: rgb(70, 70, 70);
+    padding-bottom: 15px;
+    font-weight: 500;    
+    padding-left: 5px;
+}

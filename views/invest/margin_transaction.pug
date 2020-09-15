@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>保證金交易</title>
+<style></style>
+<head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/invest/margin_transaction.css">
+    include ../navigator/navigator.pug
+    //<h2>Version</h2>
+    //<p id="p1"></p>
+    //<h2>My account<h2>
+    //<p id="account"></p>
+    <form action="" method="post">
+        <h2>保證金交易</h2>
+        <div class="deposit">
+            <span>#{user}，您好！</span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <span>請選擇：</span>            
+            <br>
+            <br>
+            <br>
+            <button class="deposit_margin"><a href="/margin_transaction/deposit_margin">保證金存入</a></button>
+            <br>
+            <br>
+            <br>
+            <span class="warn">#{warn}</span>
+            <br>
+            <br>
+            <br>
+            <button class="use_margin_credit"><a href="/margin_transaction/use_margin_credit">使用保證金憑證</a></button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button class="end_transaction"><a href="/margin_transaction/end_transaction">結束保證金交易</a></button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button class="return_home"><a href="/">回首頁</a></button>
+            <br>
+            <br>
+            <br>
+        </div>
+    </form>
+</body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/invest/margin_transaction.js"></script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>還款紀錄</title>
+<style></style>
+<head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/repay_record/repay_0002.css">
+    include ../navigator/navigator.pug
+    <h2>還款紀錄</h2><br/>
+    <p><strong><i class="fa fa-envelope"></i>借款編號0002還款紀錄</strong></p>
+    <div class="form-group">
+    <form action="" method="post">
+      <table border="2" width="1257">
+        <tr>
+        <th id="periods_header">期數</th>
+        <th id="principal_header">本金</th>
+        <th id="interest_header">利息</th>
+        <th id="require_amount_header">應繳金額</th>
+        <th id="paydate_header">應繳日期</th>
+        <th id="real_paydate_header">實際還款日期</th>
+        <th id="repay_amount_header">還款金額</th>
+        <th id="penalty_header">逾期罰金</th>
+        <th id="unrepaid_header">該期未還金額</th>
+        </tr>
+        if(data)
+          each x in data
+            <tr>
+              <form id="search" action="" method="post">
+                <td id="periods">
+                    |#{x.periods}
+                </td>
+                <td id="principal">
+                    |#{x.principal} 
+                </td>
+                <td id="interest">
+                    |#{x.interest}
+                </td>
+                <td id="require_amount">
+                    |#{x.require_amount}
+                </td>
+                <td id="paydate">
+                    |#{x.paydate}
+                </td>
+                <td id="real_paydate">
+                    |#{x.real_paydate}
+                </td>
+                <td id="repay_amount">
+                    |#{x.repay_amount}
+                </td>
+                <td id="penalty">
+                    |#{x.penalty}
+                </td>
+                <td id="unrepaid">
+                    |#{x.unrepaid}
+                </td>
+            </tr>
+        </table>
+        </form>
+        </div>
+        </body>
+        </head>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+        <script type="text/javascript" src="/javascripts/searchpage/searchpage.js"></script>
+</html>

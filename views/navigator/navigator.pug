@@ -1,0 +1,86 @@
+<header>
+<style>#nav{visibility: hidden;opacity:0;}</style>
+<div id="nav">
+<link rel="stylesheet", href="/stylesheets/navigator/navigator.css">
+<nav>
+<a id="resp-menu" class="responsive-menu" href="#"><i class="fa fa-reorder"></i>CHAINBANK</a>    
+    <ul class="menu">
+    <li><a class="homer" href="/"><i class="fa fa-home"></i> CHAINBANK</a>
+    </li>
+    <li><a  href="/"><i class="fa fa-user"></i> 關於我們</a></li>
+    <li><a  href="#"><i class="fa fa-camera"></i> 借貸投資</a>
+    <ul class="sub-menu">
+    <li><a href="/searchpage">投資市場</a></li>
+    <li><a href="/deposit_tokens">儲值平台幣</a></li>
+    <li><a href="#">我要借款</a>
+        <ul>
+            <li><a href="/own_portfolio">擔保品借款</a>
+            <ul>
+            <li><a href="my_all_collateral">持有擔保品</a></li>
+            <li><a href="/own_portfolio">擔保品借款</a></li>
+            
+            </ul>
+            <li><a href="/margin_transaction">保證金交易</a>
+        </ul>
+    </li>
+    </li>
+    </li>
+    </ul>
+    </li>
+    <li><a  href="#"><i class="fa fa-tags"></i> 資金需求會員專區</a>
+            <ul>
+                <li><a href="/normal_repay">繳納分期付款/贖回</a>
+                <li><a href="/repayment_receipt">我的還款收據</a>
+            </ul></li>    
+    <li><a  href="#"><i class="fa fa-tags"></i> 資金提供會員專區</a>
+    <ul class="sub-menu">
+    <li><a href="/funding_provider">我要投資</a></li>
+    <li><a href="#">擔保品市值查詢</a>
+    <ul>
+    <li><a href="#">Sub Sub-Menu 1</a></li>
+    <li><a href="#">Sub Sub-Menu 2</a></li>
+    <li><a href="#">Sub Sub-Menu 3</a></li>
+    <li><a href="#">Sub Sub-Menu 4</a></li>
+    <li><a href="#">Sub Sub-Menu 5</a></li>	
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li><a  href="/investinfo_1"><i class="fa fa-search"></i> 查詢</a>
+    <ul class="sub-menu">
+    <li><a href="/investinfo_1">借貸查詢</a></li>
+    <li><a href="/funding_search">資金需求查詢</a></li>
+    <li><a href="/repay_search">還款紀錄查詢</a></li>
+    <li><a href="/my_investment">我的投資</a></li>
+    <ul>
+    <li><a href="#">Sub Sub-Menu 1</a></li>
+    <li><a href="#">Sub Sub-Menu 2</a></li>
+    <li><a href="#">Sub Sub-Menu 3</a></li>
+    <li><a href="#">Sub Sub-Menu 4</a></li>
+    <li><a href="#">Sub Sub-Menu 5</a></li>	
+    </ul>
+    </li>
+    </ul>
+    </li>
+        if(!user)
+            <li>
+                <a  href="/sign"><i class="fa fa-sitemap"></i> 註冊</a>
+            </li>
+            <li>
+                <a  href="/login"><i class="fa fa-exclamation-triangle"></i> 登入</a>
+            </li>
+        else
+            
+            <li><a  href="#" id="user_name"><i class="fa fa-exclamation-triangle "></i>#{user}會員中心</a>
+            <ul>
+                <li><a href="/myaccount">帳戶資料</a>
+                <li><a  href="/logout"><i class="fa fa-exclamation-triangle"></i>登出</a></li>
+            </ul></li>
+            <li id='wallet_connection'>Connect Wallet to start</li>
+        </ul>
+        
+</nav>
+<script type="text/javascript" src="/javascripts/navigator/navigator.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/web3@0.2.5/dist/web3.min.js'></script>
+</div>
+</header>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Invest list</title>
+<style></style>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/my_investment/my_investment.css">
+</head>
+<body>
+    include ../navigator/navigator.pug
+    <div id="search_bar">
+    <div class="wrap">
+    <div class="search">
+        <input type="text" class="searchTerm" placeholder="What do you want to search?" value="">
+        <select>
+            <option value ="crypto">投資策略</option>
+            <option value ="crypto">支付方法-保證金</option>
+            <option value ="crypto">支付方法-擔保品</option>
+        </select>
+        <button class="searchButton">
+        <i class="fa fa-search"></i>
+    </button>
+    </div>
+    </div>
+    </div>
+    <div id="invest_list">
+    <div id="invest_text"><p id="name_text">投資策略</p><p id="price_text">價格（台幣）</p><p id="change_text">維持率（低限0.28)</p><p id="type_text">支付方法</p></div>
+    <div id="invest_details">
+    </div>
+    </div>  
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script type="text/javascript" src="/javascripts/my_investment/my_investment.js"></script>
+</html>

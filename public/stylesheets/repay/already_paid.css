@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f1f1f1;
+  font-family: 'Open Sans', sans-serif;
+}
+#repay_list{
+    margin:70px auto;
+    width:35%;
+    height:550px;
+    background-color: rgb(192, 209, 193);
+    border-radius: 20px;
+    border: white 2px solid;
+}
+.topic{
+    color:#616161;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.text{
+    color:#4b4a4a;
+    background-color: rgb(248, 248, 248);
+    padding: 5px;
+    width:auto;
+    margin-left: 30px;
+    margin-right: 30px;  
+    font-size: 18px;
+}
+#page_topic{
+    margin:40px auto;
+    text-align: center;
+
+}

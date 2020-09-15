@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>選擇投資標的</title>
+<style></style>
+<head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet", href="/stylesheets/funding_provider/funding_provider.css">
+    include ../navigator/navigator.pug
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <span>#{user}，您好！請選擇投資標的:</span>
+    <div class="form-group">
+        <table border="1"cellpadding="5">
+            <tr>
+                <th id="rand_id_header">資金需求代號</th>
+                <th id="funding_requester_header">資金需求人</th>
+                <th id="amount_demand_header">總需求金額</th>
+                <th id="keep_rate_header">維持率</th>
+                <th id="market_paice_header">市價</th>
+                <th id="now_matched_amount_header">尚缺金額</th>
+                <th id="now_matched_percent_header">媒合完成率</th>
+                <th id="strategy_id_header">策略編號</th>
+                <th id="credit_type_header">憑證類別</th>
+                <th id="match_status_header">媒合狀態</th>
+                <th id="create_date_header">創建日期</th>
+            </tr>
+            if(data)
+                each x in data
+                    <tr>
+                        <form id="doinvest"action="" method="post">
+                            <input type="hidden"id="requirementID" name="requirementID" value="#{x.requirementID}">
+                            <td class="rand_id"id="rand_id">
+                                |#{x.rand}
+                            </td>
+                            <td class="funding_requester"id=funding_requester>
+                                |#{x.borrower_id}
+                            </td>
+                            <td class="amount_demand"id=amount_demand>
+                                |#{x.funding_need}
+                            </td>
+                            <td class=keep_rate id="keep_rate_#{x.requirementID}">
+                                |--
+                            </td>
+                            <td class=market_price id="market_price_#{x.requirementID}">
+                                |--
+                            </td>
+                            <td class="now_matched_amount"id="now_matched_amount">
+                                |#{x.funding_need-x.now_matched_amount}
+                            </td>
+                            <td class="now_matched_percent"id="now_matched_percent">
+                                |#{x.now_matched_percent*100}%
+                            </td>         
+                            <td class="strategy_id"id=strategy_id>
+                                |#{x.strategyID}
+                            </td>
+                            <td class="credit_type"id=credit_type value=#{x.credit_type}>
+                                if x.credit_type='Margin'
+                                    |保證金
+                                else 
+                                    |擔保品
+                            </td>
+                            <td class="matched_or_not"id=matched_or_not value=#{x.match_status}> 
+                                |#{status}
+                            </td>
+                            <td class="create_day" id=create_day>
+                                |#{x.create_date}
+                            </td>
+                            <td class="submit_form">
+                                <input type="submit" value="選擇"/>
+                            </td>
+                        </form>
+                    </tr>
+        </table>
+    </div>
+</body>
+    <script>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script type="text/javascript" src="/javascripts/funding_provider/funding_provider.js"></script>
+</html>
